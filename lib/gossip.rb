@@ -23,8 +23,13 @@ class Gossip
     return all_gossips
   end
 
+  #def self.find(id)
+  #  return self.all[id]
+  #end
+
   def self.find(id)
-    return self.all[id]
+    gossip_array = Gossip.all
+    return gossip_array[id.to_i]
   end
 
 
