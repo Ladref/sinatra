@@ -3,16 +3,13 @@
     <title>The Gossip Project</title>
   </head>
   <body>
-    <h1>Mon super site de gossip, depuis le dossier views !</h1>
-    <a href="/gossips/new/">le texte du lien</a>
+    <h1>Voici les gossips !</h1>
 
     <% gossips.each_with_index do |gossip, index| %>
         <p>
-          <%= gossip.author %><br/>
-          <%= gossip.content %><br/>
           <a href="/gossips/<%=index%>/">Gossip n°<%= index %></a>
         </p>
-      <% end %>
+    <% end %>
     <!--En fait, <% %> te sert à exécuter du Ruby au sein d'un fichier HTML. Par exemple pour faire un each do.-->
     <!--Par contre <%= %> va te servir à afficher un string Ruby qui est entre ces balises (c'est l'équivalent d'un puts mais sur du HTML).-->
 

@@ -23,6 +23,10 @@ class Gossip
     return all_gossips
   end
 
+  def self.find(id)
+    return self.all[id]
+  end
+
 
 # End of the Gossip class
 end

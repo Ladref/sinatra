@@ -19,6 +19,10 @@ class ApplicationController < Sinatra::Base
   end
   #Params est une variable qui permet de récupérer les éléments du formulaire "new_gossip.erb"
 
+  get '/gossips/:id/' do
+    gossip_single = Gossip.find(params['id'].to_i)
+    erb :show_gossip, locals: {gossip_single: gossip_single}
+  end
 
 # End of the ApplicationController class
 end
