@@ -5,5 +5,15 @@
   <body>
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
     <a href="/gossips/new/">le texte du lien</a>
+
+    <% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
+    <!--En fait, <% %> te sert à exécuter du Ruby au sein d'un fichier HTML. Par exemple pour faire un each do.-->
+    <!--Par contre <%= %> va te servir à afficher un string Ruby qui est entre ces balises (c'est l'équivalent d'un puts mais sur du HTML).-->
+
   </body>
 </html>
